@@ -1,50 +1,24 @@
-// https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/S
+// https://codeforces.com/problemset/problem/263/A
 
 #include <stdio.h>
 
 int main()
 {
-    int N, M, target;
-    scanf("%d", &N);
-    scanf("%d", &M);
-
-    int matt[N][M];
-
-    int flag = 1;
-
-    // matrix input
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < M; j++)
-        {
-            scanf("%d", &matt[i][j]);
+    int matrix[5][5];
+    
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            scanf("%d", &matrix[i][j]);
         }
     }
-
-    scanf("%d", &target);
-
-    // oepration to find the summation of the diagonals
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = 0; j < M; j++)
-        {
-           
-            if (matt[i][j] == target)
-            {
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            if(matrix[i][j] == 1) {
+                int res = (abs(2-i) + abs(2-j));
                 
-                flag = 0;
+                printf("%d", res);
             }
         }
-    
-    }
-
-    if (flag == 0)
-    {
-        printf("will not take number");
-    }
-    else
-    {
-        printf("will take number");
     }
 
     return 0;
