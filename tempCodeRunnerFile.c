@@ -1,8 +1,6 @@
-// https://codeforces.com/problemset/problem/263/A
-
 #include <stdio.h>
 
-long long summation(int arr[], int size, int index) {
+int summation(int arr[], int size, int index) {
     if(index == size) {
         return 0;
     }
@@ -14,13 +12,13 @@ int main()
 {
     int N;
     scanf("%d", &N);
-    long long int A[N];
+    int A[N];
     
     for (int i = 0; i < N; i++) {
         scanf("%d", &A[i]);
     }
     
-    long long int sum = summation(A, N, 0);
+    int sum = summation(A, N, 0);
     printf("%d", sum);
 
     return 0;
