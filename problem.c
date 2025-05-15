@@ -1,27 +1,20 @@
-// https://codeforces.com/problemset/problem/263/A
+// https://codeforces.com/group/MWSDmqGsZm/contest/223339/problem/B
 
-#include <stdio.h>
+#include<stdio.h>
 
-long long summation(int arr[], int size, int index) {
-    if(index == size) {
-        return 0;
+void print1toN(int i, int num ) {
+    if(i == num+1) {
+        return;
     }
-
-    return arr[index] + summation(arr, size, index + 1);
+    printf("%d\n", i);
+    print1toN(i+1, num);
 }
 
-int main()
-{
-    int N;
-    scanf("%d", &N);
-    long long int A[N];
+int main() {
+    int num;
+    scanf("%d", &num);
+    print1toN(1, num);
     
-    for (int i = 0; i < N; i++) {
-        scanf("%d", &A[i]);
-    }
-    
-    long long int sum = summation(A, N, 0);
-    printf("%d", sum);
 
     return 0;
 }
