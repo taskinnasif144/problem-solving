@@ -1,3 +1,5 @@
+// https://codeforces.com/group/MWSDmqGsZm/contest/329103/problem/C
+
 
 #include <stdio.h>
 
