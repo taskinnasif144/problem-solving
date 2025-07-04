@@ -1,20 +1,23 @@
 #include<bits/stdc++.h>
-
 using namespace std;
-
 int main() {
-
     int size;
     cin >> size;
-    int arr[size];
-
-    for(int i = 0; i < size; i++) {
-        cin >> arr[i];
+    vector<int> v(size);
+    for(int i  = 0; i < size; i++) {
+        cin >> v[i];
     }
+    int l =0; 
+    int r = size - 1;
 
-    for(int i = size -1; i >= 0; i--) {
-        cout << arr[i] << " ";
+    while (l < r) {
+        swap(v[l], v[r]);
+        l++;
+        r--;
     }
     
+    for(int i = 0; i < size; i++) {
+        cout << v[i] << " ";
+    }
     return 0;
 }
